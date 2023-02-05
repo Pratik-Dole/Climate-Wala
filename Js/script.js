@@ -6,7 +6,7 @@ const options = {
 	}
 };
 
-fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Seattle', options)
+fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Delhi', options)
 	.then(response => response.json())
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
