@@ -16,13 +16,16 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"/>
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
-    />
-
+    ></script>
     <title>Weather Condition</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark text-white bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">Climate Wala</a>
         <button
@@ -39,9 +42,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Home</a
-              >
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="services.html">Our Services</a>
@@ -80,73 +81,63 @@
     </nav>
 
     <div class="container">
-      <h1 class="my-4 text-center">Weather For New Delhi</h1>
+      <h1 class="my-4 text-center">Weather Of The  <span></span></h1>
       <main>
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
           <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
-              <div class="card-header py-3">
+            <div class="card mb-4 rounded-3 shadow-sm border-success">
+              <div class="card-header py-3 text-white bg-success border-primary">
                 <h4 class="my-0 fw-normal">Temperature</h4>
               </div>
               <div class="card-body">
-                <h1 class="card-title pricing-card-title">
-                  $0<small class="text-muted fw-light">/mo</small>
+                <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">&#8451;</small>
                 </h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>10 users included</li>
-                  <li>2 GB of storage</li>
-                  <li>Email support</li>
-                  <li>Help center access</li>
+                <ul class="list-unstyled mt-3 mb-4 row">
+                  <li>Temperature : <span id="temp"></span></li>
+                  <li>Max Temperature : <span id="min_temp"></span></li>
+                  <li>Min Temperature : <span id="max_temp"></span></li>
                 </ul>
-                <button
-                  type="button"
-                  class="w-100 btn btn-lg btn-outline-primary"
-                >
-                  Sign up for free
+                <button type="button" class="w-100 btn btn-lg btn-dark">
+                  Know more........
                 </button>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
-              <div class="card-header py-3">
-                <h4 class="my-0 fw-normal">Pro</h4>
+            <div class="card mb-4 rounded-3 shadow-sm border-success">
+              <div class="card-header py-3 text-white bg-success border-primary">
+                <h4 class="my-0 fw-normal">Humidity</h4>
               </div>
               <div class="card-body">
-                <h1 class="card-title pricing-card-title">
-                  $15<small class="text-muted fw-light">/mo</small>
+                <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">%</small>
                 </h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>20 users included</li>
-                  <li>10 GB of storage</li>
-                  <li>Priority email support</li>
-                  <li>Help center access</li>
+                <ul class="list-unstyled mt-3 mb-4 row">
+                  <li>Cloud PCT : <span id="cloud_pct"></span></li>
+                  <li>Feels Like : <span id="feels_like"></span></li>
+                  <li>Humidity : <span id="humidity"></span></li>
                 </ul>
-                <button type="button" class="w-100 btn btn-lg btn-primary">
-                  Get started
+                <button type="button" class="w-100 btn btn-lg btn-dark">
+                  Know more........
                 </button>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm border-primary">
-              <div
-                class="card-header py-3 text-white bg-primary border-primary"
-              >
-                <h4 class="my-0 fw-normal">Enterprise</h4>
+            <div class="card mb-4 rounded-3 shadow-sm border-success">
+              <div class="card-header py-3 text-white bg-success border-primary">
+                <h4 class="my-0 fw-normal">Wind Speed</h4>
               </div>
               <div class="card-body">
-                <h1 class="card-title pricing-card-title">
-                  $29<small class="text-muted fw-light">/mo</small>
+                <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">Km/hr</small>
                 </h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>30 users included</li>
-                  <li>15 GB of storage</li>
-                  <li>Phone and email support</li>
-                  <li>Help center access</li>
+                <ul class="list-unstyled mt-3 mb-4 row">
+                  <li>Wind Speed : <span id="wind_speed"></span></li>
+                  <li>Sunrise : <span id="sunrise"></span></li>
+                  <li>Sunset : <span id="sunset"></span></li>
+                  <!-- <li>Wind Degree : <span id="wind_degrees"></span></li> -->
                 </ul>
-                <button type="button" class="w-100 btn btn-lg btn-primary">
-                  Contact us
+                <button type="button" class="w-100 btn btn-lg btn-dark">
+                  Know more........
                 </button>
               </div>
             </div>
@@ -186,6 +177,9 @@
                 <td>9</td>
                 <td>10</td>
               </tr>
+            </tbody>
+
+            <tbody>
               <tr>
                 <th scope="row" class="text-start">Nagpur</th>
                 <td>1</td>
@@ -201,7 +195,9 @@
               </tr>
             </tbody>
 
-            <tbody>
+            <tbody></tbody>
+
+            <!-- <tbody>
               <tr>
                 <th scope="row" class="text-start">Akola</th>
                 <td>1</td>
@@ -214,8 +210,8 @@
                 <td>8</td>
                 <td>9</td>
                 <td>10</td>
-              </tr>
-              <tr>
+              </tr> -->
+              <!-- <tr>
                 <th scope="row" class="text-start">Wardha</th>
                 <td>1</td>
                 <td>2</td>
@@ -227,7 +223,7 @@
                 <td>8</td>
                 <td>9</td>
                 <td>10</td>
-              </tr>
+              </tr> -->
               <!-- <tr>
                 <th scope="row" class="text-start">Gondia</th>
                 <td>1</td>
@@ -256,14 +252,9 @@
 
     <footer>
       <div>
-        Copyright &copy; 2022 (www.learningResource.com) All Rights Reserved.
+        Copyright &copy; 2023 (www.ClimateWala.com) All Rights Reserved.
       </div>
     </footer>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+ 
   </body>
 </html>

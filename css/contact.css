@@ -39,7 +39,7 @@ body{
     font-size: 20px;
   }
   ul li a:hover {
-    background-color: red;
+    background-color: rgb(213, 86, 86);
   }
   .bton {
     background-color: green;
@@ -100,7 +100,7 @@ footer {
     align-items: center;
     background-color: black;
     color: white;
-    height: 25px;
+    height: 35px;
     margin: auto;
     padding: 5px 5px;
     font-size: 20px;
